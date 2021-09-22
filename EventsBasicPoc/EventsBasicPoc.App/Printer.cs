@@ -19,5 +19,10 @@ namespace EventsBasicPoc.App
             //raise event
             if (printed != null) printed(this,null);
         }
+
+        public void Print2()
+        {
+            Console.WriteLine($"Print2 method executed");
+        }
     }
 }
