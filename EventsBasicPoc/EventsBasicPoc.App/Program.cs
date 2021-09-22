@@ -6,7 +6,19 @@ namespace EventsBasicPoc.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            var printer = new Printer();
+            var reporter = new Reporter();
+
+            //Handle wiring
+            printer.printed += reporter.Report;
+
+
+            //raise the event
+            printer.Print();
+
+
+            Console.ReadLine();
         }
     }
 }
